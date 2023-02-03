@@ -280,11 +280,17 @@ puts ""
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
 
-#for movie in movies
-    #puts movie["title"]
-    #puts movie["year_released"]
-    #puts warner_bros["name"]
-#end
+movies = Movie.all
+
+#puts movies.count
+
+for movie in movies
+    movie_title = movie["title"]
+    year_released = movie["year_released"]
+    rated = movie["rated"]
+    studio = warner_bros["name"]
+    puts "#{movie_title} #{year_released} #{rated} #{studio}"
+end
 
 # Prints a header for the cast output
 puts ""
@@ -294,3 +300,6 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+
+cast = Role.all
+puts Role.count
